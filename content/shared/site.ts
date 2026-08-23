@@ -11,4 +11,9 @@ export const siteContent = {
     { href: "/sobre", label: "Sobre" },
     { href: "/contato", label: "Contato" },
   ] satisfies NavigationItem[],
+  solutionNavigation: [
+    { href: "/solucoes", label: "Internet" },
+    { href: "/solucoes", label: "Fortigate" },
+    { href: "/solucoes", label: "Infraestrutura" },
+  ] satisfies NavigationItem[],
 };
