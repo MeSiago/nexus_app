@@ -6,7 +6,7 @@ Nexus-specific system; it does not reproduce Linear's identity or assets.
 
 ## Visual contract
 
-- Use a warm light canvas, quiet surfaces, one-pixel keylines, and restrained
+- Use a cool-neutral light canvas, quiet surfaces, one-pixel keylines, and restrained
   elevation.
 - Use blue for interaction, orientation, focus, and purposeful technical
   emphasis. Keep body copy and large areas neutral.

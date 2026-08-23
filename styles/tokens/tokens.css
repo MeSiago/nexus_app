@@ -1,15 +1,15 @@
 :root {
   color-scheme: light;
 
-  --nexus-color-background: #f4f1eb;
+  --nexus-color-background: #f6f8fb;
   --nexus-color-surface: #ffffff;
-  --nexus-color-surface-subtle: #faf9f6;
-  --nexus-color-surface-raised: #ffffff;
-  --nexus-color-ink: #13221f;
-  --nexus-color-muted-ink: #52605d;
-  --nexus-color-border: #d8ddd9;
-  --nexus-color-border-subtle: #e7eae6;
-  --nexus-color-border-strong: #b9c3bd;
+  --nexus-color-surface-subtle: #f1f4f8;
+  --nexus-color-surface-raised: #fbfcfe;
+  --nexus-color-ink: #162238;
+  --nexus-color-muted-ink: #586579;
+  --nexus-color-border: #d9e0e9;
+  --nexus-color-border-subtle: #e7ecf2;
+  --nexus-color-border-strong: #c3cedb;
   --nexus-color-primary-50: #eff6ff;
   --nexus-color-primary-100: #dbeafe;
   --nexus-color-primary-500: #3b82f6;
@@ -41,8 +41,8 @@
   --nexus-radius-lg: 0.75rem;
   --nexus-radius-pill: 9999px;
 
-  --nexus-shadow-soft: 0 0.75rem 2rem rgb(19 34 31 / 8%);
-  --nexus-shadow-floating: 0 1rem 2.5rem rgb(19 34 31 / 12%);
+  --nexus-shadow-soft: 0 0.75rem 2rem rgb(22 34 56 / 8%);
+  --nexus-shadow-floating: 0 1rem 2.5rem rgb(22 34 56 / 12%);
 
   --nexus-motion-fast: 160ms;
   --nexus-motion-standard: 280ms;

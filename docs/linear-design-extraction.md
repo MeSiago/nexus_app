@@ -12,7 +12,7 @@ The transferable design idea is:
 
 > Quiet chrome + editorial typography + precise keylines + one convincing visual proof per section.
 
-For Nexus, this should become a premium institutional system for a Brazilian IT service provider. It should feel reliable, operational, and composed. The experience can borrow Linear’s rhythm and craft while retaining the existing Nexus light, warm, understated foundation with blue as the primary brand color.
+For Nexus, this should become a premium institutional system for a Brazilian IT service provider. It should feel reliable, operational, and composed. The experience can borrow Linear’s rhythm and craft while retaining a light, cool-neutral, understated foundation with blue as the primary brand color.
 
 ### Keep
 
@@ -61,9 +61,9 @@ The reference uses role-based values that can be translated into Nexus tokens:
 
 | Role | Reference observation | Nexus treatment |
 | --- | --- | --- |
-| Canvas | `rgb(8, 9, 10)` | Keep Nexus’s current warm light canvas by default; allow dark proof modules only when useful. |
+| Canvas | `rgb(8, 9, 10)` | Keep Nexus’s current cool-neutral light canvas by default; allow dark proof modules only when useful. |
 | Primary text | `rgb(247, 248, 248)` | Map to `ink` in the current Nexus theme. |
-| Muted text | `rgb(138, 143, 152)` | Map to `mutedInk`; verify contrast on the warm canvas. |
+| Muted text | `rgb(138, 143, 152)` | Map to `mutedInk`; verify contrast on the cool-neutral canvas. |
 | Structural border | `rgba(255,255,255,.08)` / `#23252a` | Map to the current `border` token and add a weaker keyline role if needed. |
 | Raised surface | `#0f1011` to `#161718` | Map to `surface` / `surfaceSubtle`; do not add surfaces without a content reason. |
 | Accent | Controlled blue/purple/yellow moments | Replace the current green accent direction with Nexus blue as the primary action, link, focus, and technical-emphasis color. |
@@ -131,7 +131,7 @@ Desktop should use composition and proximity to create hierarchy. Mobile should 
 
 ## 5. Typography system
 
-The current Nexus token foundation is light and warm. Keep the font family flexible until the brand typography is approved, but use a deliberate variable sans or high-quality system sans rather than browser-default Arial if a licensed/self-hosted choice becomes available.
+The current Nexus token foundation is light and cool-neutral. Keep the font family flexible until the brand typography is approved, but use a deliberate variable sans or high-quality system sans rather than browser-default Arial if a licensed/self-hosted choice becomes available.
 
 ### Type roles
 
@@ -155,13 +155,13 @@ The current Nexus token foundation is light and warm. Keep the font family flexi
 
 ## 6. Color and surface roles
 
-Blue is now the explicit primary color direction for Nexus as an IT service provider. The current codebase provides a warm light baseline, but its green accent should be replaced when the visual system is implemented:
+Blue is now the explicit primary color direction for Nexus as an IT service provider. The current codebase provides a cool-neutral light baseline, and blue replaces the prior green accent direction:
 
-- Background: `#f4f1eb`
+- Background: `#f6f8fb`
 - Surface: `#ffffff`
-- Ink: `#13221f`
-- Muted ink: `#52605d`
-- Border: `#d8ddd9`
+- Ink: `#162238`
+- Muted ink: `#586579`
+- Border: `#d9e0e9`
 - Accent: currently `#1d685b` in code; replace with the working blue primary below.
 
 Treat these as role tokens, not literal page decoration. Extend them only when a real component requires a distinct role.
@@ -185,7 +185,7 @@ These values establish the current design direction and should remain easy to up
 - Blue is the primary brand signal for actions, links, focus, active navigation, and approved technical diagrams.
 - Use `primary-600` as the default interactive blue and `primary-700` for hover or pressed states.
 - Keep body text and large decorative areas neutral; do not turn every heading blue.
-- Pair blue with the warm canvas and verify contrast for every text size.
+- Pair blue with the cool-neutral canvas and verify contrast for every text size.
 - Use `primary-100` and `primary-50` as quiet support surfaces, not as repeated card decoration.
 - Use `deepBlue` only inside purposeful proof frames or technical compositions so the overall site remains calm.
 - Do not use blue to imply uptime, SLA performance, availability, or any other unapproved operational claim.
@@ -338,7 +338,7 @@ The reference uses motion to add polish to framed proof and controls. Nexus shou
 - One clear H1 per route and a logical heading order.
 - Links navigate; buttons act. Do not style one as the other without preserving semantics.
 - All icon-only controls need an accessible name.
-- Maintain a visible focus state on the warm background and on dark proof surfaces.
+- Maintain a visible focus state on the cool-neutral background and on dark proof surfaces.
 - Verify text and border contrast rather than assuming muted gray is safe.
 - Provide alt text for informative visuals and empty alt text for decorative visuals.
 - Make horizontal rails keyboard reachable and communicate overflow without trapping focus.
@@ -405,7 +405,7 @@ Keep visible copy in `content/pages` and `content/shared`. Components should con
 
 - Check every route at a desktop width and at approximately 390px mobile width.
 - Verify header, footer, CTA, proof frame, and mobile menu states.
-- Verify no text overflows or becomes too low-contrast on the warm background.
+- Verify no text overflows or becomes too low-contrast on the cool-neutral background.
 - Verify all images reserve dimensions before load.
 - Verify reduced motion and keyboard focus.
 - Add visual-regression coverage once the first visual system implementation stabilizes.
