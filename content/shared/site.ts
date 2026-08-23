@@ -16,4 +16,9 @@ export const siteContent = {
     { href: "/solucoes", label: "Fortigate" },
     { href: "/solucoes", label: "Infraestrutura" },
   ] satisfies NavigationItem[],
+  aboutNavigation: [
+    { href: "/sobre", label: "Quem somos" },
+    { href: "/sobre", label: "Onde estamos" },
+    { href: "/sobre", label: "Onde atuamos" },
+  ] satisfies NavigationItem[],
 };

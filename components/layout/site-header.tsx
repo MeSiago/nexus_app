@@ -1,21 +1,84 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 import { siteContent } from "@/content/shared/site";
+import type { NavigationItem } from "@/types/content";
+
+type DropdownMenu = "solutions" | "about";
+type MenuDirection = "left" | "right";
+
+function DropdownItems({
+  items,
+  onSelect,
+  sectionLabel,
+}: {
+  items: NavigationItem[];
+  onSelect: () => void;
+  sectionLabel: "Solução" | "Sobre";
+}) {
+  return (
+    <div className="grid grid-cols-3 p-3">
+      {items.map((item, index) => (
+        <Link
+          className={`group/menu-item min-h-28 rounded-md px-4 py-3 outline-none transition-colors duration-100 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:bg-ink/[0.04] focus-visible:bg-primary-50 focus-visible:outline-none ${
+            index > 0 ? "border-l border-border-subtle" : ""
+          }`}
+          href={item.href}
+          key={item.label}
+          onClick={onSelect}
+          role="menuitem"
+        >
+          <span className="block text-[0.8125rem] text-muted-ink">
+            {sectionLabel}
+          </span>
+          <span className="mt-1.5 block text-sm leading-5 font-medium text-ink transition-colors duration-100 group-hover/menu-item:text-primary-700">
+            {item.label}
+          </span>
+        </Link>
+      ))}
+    </div>
+  );
+}
 
 export function SiteHeader() {
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isSolutionsMounted, setIsSolutionsMounted] = useState(false);
+  const [activeMenu, setActiveMenu] = useState<DropdownMenu | null>(null);
+  const [previousMenu, setPreviousMenu] = useState<DropdownMenu | null>(null);
+  const [menuDirection, setMenuDirection] = useState<MenuDirection>("right");
+  const [isMenuMounted, setIsMenuMounted] = useState(false);
+  const [menuHeight, setMenuHeight] = useState<number | null>(null);
+  const menuSurfaceRef = useRef<HTMLDivElement>(null);
   const primaryNavigation = siteContent.navigation.filter(
-    (item) => item.href !== "/solucoes",
+    (item) => item.href !== "/solucoes" && item.href !== "/sobre",
   );
-  const openSolutions = () => {
-    setIsSolutionsMounted(true);
-    setIsSolutionsOpen(true);
+  const activeItems =
+    activeMenu === "about"
+      ? siteContent.aboutNavigation
+      : siteContent.solutionNavigation;
+  const previousItems =
+    previousMenu === "about"
+      ? siteContent.aboutNavigation
+      : siteContent.solutionNavigation;
+  const openMenu = (menu: DropdownMenu) => {
+    if (activeMenu && activeMenu !== menu) {
+      setPreviousMenu(activeMenu);
+      setMenuDirection(menu === "about" ? "right" : "left");
+    }
+
+    setIsMenuMounted(true);
+    setActiveMenu(menu);
   };
-  const closeSolutions = () => setIsSolutionsOpen(false);
+  const closeMenu = () => {
+    setActiveMenu(null);
+    setPreviousMenu(null);
+  };
+
+  useLayoutEffect(() => {
+    if (activeMenu && menuSurfaceRef.current) {
+      setMenuHeight(menuSurfaceRef.current.scrollHeight + 16);
+    }
+  }, [activeMenu, previousMenu]);
 
   return (
     <header className="border-b border-border-subtle bg-background/94 backdrop-blur-md">
@@ -32,16 +95,17 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <nav
             aria-label="Navegação principal"
-            className="hidden md:block"
+            className="relative hidden md:block"
+            onMouseLeave={closeMenu}
             onBlur={(event) => {
               if (!event.currentTarget.contains(event.relatedTarget)) {
-                closeSolutions();
+                closeMenu();
               }
             }}
           >
             <ul className="flex items-center gap-1 text-[0.8125rem] font-medium text-muted-ink">
               {primaryNavigation.slice(0, 1).map((item) => (
-                <li key={item.href}>
+                <li key={item.href} onMouseEnter={closeMenu}>
                   <Link
                     className="inline-flex h-8 items-center rounded-pill px-3 transition-colors duration-100 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:bg-ink/[0.06] hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
                     href={item.href}
@@ -51,20 +115,18 @@ export function SiteHeader() {
                 </li>
               ))}
               <li
-                className="relative"
-                onMouseEnter={openSolutions}
-                onMouseLeave={closeSolutions}
+                onMouseEnter={() => openMenu("solutions")}
               >
                 <button
                   aria-controls="solutions-menu"
-                  aria-expanded={isSolutionsOpen}
+                  aria-expanded={activeMenu === "solutions"}
                   aria-haspopup="menu"
                   className="inline-flex h-8 items-center rounded-pill px-3 transition-colors duration-100 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:bg-ink/[0.06] hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
-                  onClick={openSolutions}
-                  onFocus={openSolutions}
+                  onClick={() => openMenu("solutions")}
+                  onFocus={() => openMenu("solutions")}
                   onKeyDown={(event) => {
                     if (event.key === "Escape") {
-                      closeSolutions();
+                      closeMenu();
                     }
                   }}
                   type="button"
@@ -72,62 +134,27 @@ export function SiteHeader() {
                   Soluções
                 </button>
 
-                {isSolutionsMounted ? (
-                  <div className="absolute top-full right-[-10.75rem] z-20 w-[min(52rem,calc(100vw-3rem))] pt-3">
-                    <div
-                      className={`origin-top-right rounded-[0.875rem] border border-border bg-surface/90 p-2 shadow-floating backdrop-blur-[32px] ${
-                        isSolutionsOpen
-                          ? "animate-[nexus-menu-in_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
-                          : "animate-[nexus-menu-out_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
-                      }`}
-                      onAnimationEnd={(event) => {
-                        if (!isSolutionsOpen && event.target === event.currentTarget) {
-                          setIsSolutionsMounted(false);
-                        }
-                      }}
-                    >
-                      <div
-                        className="overflow-hidden rounded-md border border-border-subtle bg-surface"
-                        id="solutions-menu"
-                        role="menu"
-                      >
-                        <div className="grid grid-cols-3 p-3">
-                          {siteContent.solutionNavigation.map((item, index) => (
-                            <Link
-                              className={`group/menu-item min-h-28 rounded-md px-4 py-3 outline-none transition-colors duration-100 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:bg-ink/[0.04] focus-visible:bg-primary-50 focus-visible:outline-none ${
-                                index > 0 ? "border-l border-border-subtle" : ""
-                              }`}
-                              href={item.href}
-                              key={item.label}
-                              onClick={closeSolutions}
-                              role="menuitem"
-                            >
-                              <span className="block text-[0.8125rem] text-muted-ink">
-                                Solução
-                              </span>
-                              <span className="mt-1.5 block text-sm leading-5 font-medium text-ink transition-colors duration-100 group-hover/menu-item:text-primary-700">
-                                {item.label}
-                              </span>
-                            </Link>
-                          ))}
-                        </div>
-                        <div className="flex items-center justify-between border-t border-border-subtle px-4 pt-4 pb-3 text-sm">
-                          <p className="text-muted-ink">Conheça as soluções da Nexus</p>
-                          <Link
-                            className="font-medium text-primary-600 transition-colors duration-100 hover:text-primary-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
-                            href="/solucoes"
-                            onClick={closeSolutions}
-                          >
-                            Ver soluções →
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ) : null}
+              </li>
+              <li onMouseEnter={() => openMenu("about")}>
+                <button
+                  aria-controls="solutions-menu"
+                  aria-expanded={activeMenu === "about"}
+                  aria-haspopup="menu"
+                  className="inline-flex h-8 items-center rounded-pill px-3 transition-colors duration-100 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:bg-ink/[0.06] hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
+                  onClick={() => openMenu("about")}
+                  onFocus={() => openMenu("about")}
+                  onKeyDown={(event) => {
+                    if (event.key === "Escape") {
+                      closeMenu();
+                    }
+                  }}
+                  type="button"
+                >
+                  Sobre
+                </button>
               </li>
               {primaryNavigation.slice(1).map((item) => (
-                <li key={item.href}>
+                <li key={item.href} onMouseEnter={closeMenu}>
                   <Link
                     className="inline-flex h-8 items-center rounded-pill px-3 transition-colors duration-100 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:bg-ink/[0.06] hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring"
                     href={item.href}
@@ -137,6 +164,87 @@ export function SiteHeader() {
                 </li>
               ))}
             </ul>
+            {isMenuMounted ? (
+              <div
+                className="absolute top-full right-[-3.25rem] z-20 w-[min(52rem,calc(100vw-3rem))] pt-3"
+              >
+                <div
+                  className={`origin-top-right overflow-hidden rounded-[0.875rem] border border-border bg-surface/90 p-2 shadow-floating backdrop-blur-[32px] transition-[height] duration-[220ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+                    activeMenu
+                      ? "animate-[nexus-menu-in_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
+                      : "animate-[nexus-menu-out_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
+                  }`}
+                  onAnimationEnd={(event) => {
+                    if (!activeMenu && event.target === event.currentTarget) {
+                      setIsMenuMounted(false);
+                    }
+                  }}
+                  style={menuHeight ? { height: `${menuHeight}px` } : undefined}
+                >
+                  <div
+                    className="overflow-hidden rounded-md border border-border-subtle bg-surface"
+                    id="solutions-menu"
+                    ref={menuSurfaceRef}
+                    role="menu"
+                  >
+                    <div className="relative min-h-28 overflow-hidden">
+                      {previousMenu ? (
+                        <div
+                          className={`pointer-events-none absolute inset-0 ${
+                            menuDirection === "right"
+                              ? "animate-[nexus-menu-out-left_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
+                              : "animate-[nexus-menu-out-right_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
+                          }`}
+                        >
+                          <DropdownItems
+                            items={previousItems}
+                            onSelect={closeMenu}
+                            sectionLabel={
+                              previousMenu === "about" ? "Sobre" : "Solução"
+                            }
+                          />
+                        </div>
+                      ) : null}
+                      {activeMenu ? (
+                        <div
+                          className={
+                            previousMenu
+                              ? menuDirection === "right"
+                                ? "animate-[nexus-menu-in-right_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
+                                : "animate-[nexus-menu-in-left_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
+                              : undefined
+                          }
+                          key={activeMenu}
+                          onAnimationEnd={() => setPreviousMenu(null)}
+                        >
+                          <DropdownItems
+                            items={activeItems}
+                            onSelect={closeMenu}
+                            sectionLabel={
+                              activeMenu === "about" ? "Sobre" : "Solução"
+                            }
+                          />
+                        </div>
+                      ) : null}
+                    </div>
+                    {activeMenu === "solutions" ? (
+                      <div className="flex items-center justify-between border-t border-border-subtle px-4 pt-4 pb-3 text-sm">
+                        <p className="text-muted-ink">
+                          Conheça as soluções da Nexus
+                        </p>
+                        <Link
+                          className="font-medium text-primary-600 transition-colors duration-100 hover:text-primary-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
+                          href="/solucoes"
+                          onClick={closeMenu}
+                        >
+                          Ver soluções →
+                        </Link>
+                      </div>
+                    ) : null}
+                  </div>
+                </div>
+              </div>
+            ) : null}
           </nav>
 
           <Link
