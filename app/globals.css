@@ -1,4 +1,37 @@
 @import "tailwindcss";
+@import "../styles/tokens/tokens.css";
+
+@theme inline {
+  --color-background: var(--nexus-color-background);
+  --color-surface: var(--nexus-color-surface);
+  --color-surface-subtle: var(--nexus-color-surface-subtle);
+  --color-surface-raised: var(--nexus-color-surface-raised);
+  --color-ink: var(--nexus-color-ink);
+  --color-muted-ink: var(--nexus-color-muted-ink);
+  --color-border: var(--nexus-color-border);
+  --color-border-subtle: var(--nexus-color-border-subtle);
+  --color-border-strong: var(--nexus-color-border-strong);
+  --color-primary-50: var(--nexus-color-primary-50);
+  --color-primary-100: var(--nexus-color-primary-100);
+  --color-primary-500: var(--nexus-color-primary-500);
+  --color-primary-600: var(--nexus-color-primary-600);
+  --color-primary-700: var(--nexus-color-primary-700);
+  --color-ink-on-primary: var(--nexus-color-ink-on-primary);
+  --color-deep-blue: var(--nexus-color-deep-blue);
+  --color-deep-blue-ink: var(--nexus-color-deep-blue-ink);
+  --color-deep-blue-muted: var(--nexus-color-deep-blue-muted);
+  --color-focus-ring: var(--nexus-color-focus-ring);
+  --font-sans: var(--nexus-font-sans);
+  --font-mono: var(--nexus-font-mono);
+  --container-content: 77.5rem;
+  --shadow-soft: var(--nexus-shadow-soft);
+  --shadow-floating: var(--nexus-shadow-floating);
+  --radius-sm: var(--nexus-radius-sm);
+  --radius-md: var(--nexus-radius-md);
+  --radius-lg: var(--nexus-radius-lg);
+  --radius-pill: var(--nexus-radius-pill);
+  --ease-standard: var(--nexus-ease-standard);
+}
 
 @stylex;
 
@@ -9,21 +42,35 @@
 
   html {
     min-width: 320px;
-    background: #f4f1eb;
+    background: var(--nexus-color-background);
+    scroll-behavior: smooth;
+    font-synthesis: none;
   }
 
   body {
     min-height: 100vh;
     margin: 0;
-    background: #f4f1eb;
-    color: #13221f;
-    font-family: Arial, Helvetica, sans-serif;
+    background: var(--nexus-color-background);
+    color: var(--nexus-color-ink);
+    font-family: var(--nexus-font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  ::selection {
+    background: var(--nexus-color-primary-100);
+    color: var(--nexus-color-ink);
+  }
+
+  summary {
+    list-style: none;
   }
 }
 
