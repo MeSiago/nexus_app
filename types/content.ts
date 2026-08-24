@@ -8,3 +8,84 @@ export type NavigationItem = {
   href: "/" | "/solucoes" | "/sobre" | "/contato";
   label: string;
 };
+
+export type HomeRouteLink = Pick<NavigationItem, "href" | "label">;
+
+export type HomeProofNode = {
+  eyebrow: string;
+  label: string;
+};
+
+export type HomeService = {
+  number: string;
+  title: string;
+  description: string;
+};
+
+export type HomeFlowStep = {
+  number: string;
+  title: string;
+  description: string;
+};
+
+export type HomeValue = {
+  title: string;
+  description: string;
+};
+
+export type HomePageContent = {
+  metadata: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    links: readonly [HomeRouteLink, HomeRouteLink];
+  };
+  proof: {
+    eyebrow: string;
+    meta: string;
+    title: string;
+    caption: string;
+    nodes: {
+      terminal: HomeProofNode;
+      operations: HomeProofNode;
+      core: HomeProofNode;
+      infrastructure: HomeProofNode;
+      networkPoints: HomeProofNode;
+    };
+  };
+  manifesto: {
+    index: string;
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
+  services: {
+    index: string;
+    eyebrow: string;
+    title: string;
+    description: string;
+    items: readonly HomeService[];
+  };
+  flow: {
+    eyebrow: string;
+    title: string;
+    caption: string;
+    steps: readonly HomeFlowStep[];
+  };
+  values: {
+    index: string;
+    eyebrow: string;
+    title: string;
+    items: readonly HomeValue[];
+  };
+  cta: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    link: HomeRouteLink;
+  };
+};

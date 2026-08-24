@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { siteContent } from "@/content/shared/site";
 import type { NavigationItem } from "@/types/content";
@@ -43,6 +43,7 @@ function DropdownItems({
 }
 
 export function SiteHeader() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<DropdownMenu | null>(null);
   const [previousMenu, setPreviousMenu] = useState<DropdownMenu | null>(null);
   const [menuDirection, setMenuDirection] = useState<MenuDirection>("right");
@@ -74,6 +75,19 @@ export function SiteHeader() {
     setPreviousMenu(null);
   };
 
+  useEffect(() => {
+    const updateScrolledState = () => {
+      setIsScrolled(window.scrollY > 8);
+    };
+
+    updateScrolledState();
+    window.addEventListener("scroll", updateScrolledState, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", updateScrolledState);
+    };
+  }, []);
+
   useLayoutEffect(() => {
     if (activeMenu && menuSurfaceRef.current) {
       setMenuHeight(menuSurfaceRef.current.scrollHeight + 16);
@@ -81,8 +95,14 @@ export function SiteHeader() {
   }, [activeMenu, previousMenu]);
 
   return (
-    <header className="border-b border-border-subtle bg-background/94 backdrop-blur-md">
-      <div className="mx-auto flex h-[4.5rem] max-w-content items-center justify-between px-6 lg:px-10">
+    <header
+      className={`sticky top-0 z-50 h-[4.5rem] border-b transition-[background-color,border-color,backdrop-filter] duration-200 motion-reduce:transition-none ${
+        isScrolled
+          ? "border-border-subtle bg-background/80 backdrop-blur-md"
+          : "border-transparent bg-background backdrop-blur-none"
+      }`}
+    >
+      <div className="mx-auto flex h-full max-w-content items-center justify-between px-6 lg:px-10">
         <Link
           className="inline-flex rounded-md text-[1.45rem] font-semibold tracking-[-0.065em] text-ink outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-4 focus-visible:ring-offset-background"
           href="/"

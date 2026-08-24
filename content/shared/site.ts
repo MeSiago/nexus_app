@@ -11,6 +11,13 @@ export const siteContent = {
     { href: "/sobre", label: "Sobre" },
     { href: "/contato", label: "Contato" },
   ] satisfies NavigationItem[],
+  footer: {
+    navigationLabel: "Navegação do rodapé",
+    navigationGroups: [
+      { label: "Nexus", hrefs: ["/", "/sobre"] },
+      { label: "Explorar", hrefs: ["/solucoes", "/contato"] },
+    ],
+  },
   solutionNavigation: [
     { href: "/solucoes", label: "Internet" },
     { href: "/solucoes", label: "Fortigate" },
