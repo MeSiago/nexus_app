@@ -1,25 +1,25 @@
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
-  --nexus-color-background: #f6f8fb;
-  --nexus-color-surface: #ffffff;
-  --nexus-color-surface-subtle: #f1f4f8;
-  --nexus-color-surface-raised: #fbfcfe;
-  --nexus-color-ink: #162238;
-  --nexus-color-muted-ink: #586579;
-  --nexus-color-border: #d9e0e9;
-  --nexus-color-border-subtle: #e7ecf2;
-  --nexus-color-border-strong: #c3cedb;
-  --nexus-color-primary-50: #eff6ff;
-  --nexus-color-primary-100: #dbeafe;
-  --nexus-color-primary-500: #3b82f6;
-  --nexus-color-primary-600: #2563eb;
-  --nexus-color-primary-700: #1d4ed8;
-  --nexus-color-ink-on-primary: #ffffff;
-  --nexus-color-deep-blue: #0b1f3a;
-  --nexus-color-deep-blue-ink: #e6eef8;
-  --nexus-color-deep-blue-muted: #b8c7da;
-  --nexus-color-focus-ring: #2563eb;
+  --nexus-color-background: #08090a;
+  --nexus-color-surface: #0f1011;
+  --nexus-color-surface-subtle: #121315;
+  --nexus-color-surface-raised: #161718;
+  --nexus-color-ink: #f7f8f8;
+  --nexus-color-muted-ink: #8a8f98;
+  --nexus-color-border: #23252a;
+  --nexus-color-border-subtle: rgb(255 255 255 / 8%);
+  --nexus-color-border-strong: #23252a;
+  --nexus-color-primary-50: #161718;
+  --nexus-color-primary-100: #1c1c1d;
+  --nexus-color-primary-500: #8e9abc;
+  --nexus-color-primary-600: #f4f5f8;
+  --nexus-color-primary-700: #d0d6e0;
+  --nexus-color-ink-on-primary: #08090a;
+  --nexus-color-deep-blue: #0f1011;
+  --nexus-color-deep-blue-ink: #f7f8f8;
+  --nexus-color-deep-blue-muted: #8a8f98;
+  --nexus-color-focus-ring: #8e9abc;
 
   --nexus-font-sans: "Inter", "Avenir Next", "Segoe UI", Helvetica, Arial,
     sans-serif;

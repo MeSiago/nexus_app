@@ -6,10 +6,10 @@ Nexus-specific system; it does not reproduce Linear's identity or assets.
 
 ## Visual contract
 
-- Use a cool-neutral light canvas, quiet surfaces, one-pixel keylines, and restrained
+- Use a near-black canvas, quiet dark surfaces, one-pixel keylines, and restrained
   elevation.
-- Use blue for interaction, orientation, focus, and purposeful technical
-  emphasis. Keep body copy and large areas neutral.
+- Reserve desaturated blue for contextual orientation, focus, and purposeful
+  technical emphasis. Keep body copy, primary actions, and large areas monochrome.
 - Give each route one clear H1 and one primary idea. Pair a concise message
   with one proof object when a visual improves comprehension.
 - Keep public copy in Brazilian Portuguese and keep unresolved business facts
@@ -35,7 +35,7 @@ The approved scale is intentionally small:
 | --- | --- |
 | Spacing | `4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96 / 128px` |
 | Radius | `sm 4px`, `md 8px`, `lg 12px`, `pill 9999px` |
-| Primary blue | `primary-50 / 100 / 500 / 600 / 700` |
+| Contextual / inverted action | `primary-50 / 100 / 500 / 600 / 700` |
 | Motion | `fast 160ms`, `standard 280ms`, `reveal 360ms` |
 
 ## Component rules
