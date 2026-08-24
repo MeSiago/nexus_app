@@ -1,25 +1,25 @@
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
-  --nexun-color-background: #08090a;
-  --nexun-color-surface: #0f1011;
-  --nexun-color-surface-subtle: #121315;
-  --nexun-color-surface-raised: #161718;
-  --nexun-color-ink: #f7f8f8;
-  --nexun-color-muted-ink: #8a8f98;
-  --nexun-color-border: #23252a;
-  --nexun-color-border-subtle: rgb(255 255 255 / 8%);
-  --nexun-color-border-strong: #23252a;
-  --nexun-color-primary-50: #161718;
-  --nexun-color-primary-100: #1c1c1d;
-  --nexun-color-primary-500: #8e9abc;
-  --nexun-color-primary-600: #f4f5f8;
-  --nexun-color-primary-700: #d0d6e0;
-  --nexun-color-ink-on-primary: #08090a;
-  --nexun-color-deep-blue: #0f1011;
-  --nexun-color-deep-blue-ink: #f7f8f8;
-  --nexun-color-deep-blue-muted: #8a8f98;
-  --nexun-color-focus-ring: #8e9abc;
+  --nexun-color-background: #f8fafc;
+  --nexun-color-surface: #ffffff;
+  --nexun-color-surface-subtle: #f3f6fa;
+  --nexun-color-surface-raised: #ebf0f7;
+  --nexun-color-ink: #10213d;
+  --nexun-color-muted-ink: #5b6b82;
+  --nexun-color-border: #d7e0ec;
+  --nexun-color-border-subtle: rgb(16 33 61 / 10%);
+  --nexun-color-border-strong: #b6c3d6;
+  --nexun-color-primary-50: #eef3ff;
+  --nexun-color-primary-100: #dce7ff;
+  --nexun-color-primary-500: #4d69a3;
+  --nexun-color-primary-600: #3457a5;
+  --nexun-color-primary-700: #26458f;
+  --nexun-color-ink-on-primary: #ffffff;
+  --nexun-color-deep-blue: #eef3ff;
+  --nexun-color-deep-blue-ink: #10213d;
+  --nexun-color-deep-blue-muted: #5b6b82;
+  --nexun-color-focus-ring: #3457a5;
 
   --nexun-font-sans: "Inter", "Avenir Next", "Segoe UI", Helvetica, Arial,
     sans-serif;
@@ -41,8 +41,8 @@
   --nexun-radius-lg: 0.75rem;
   --nexun-radius-pill: 9999px;
 
-  --nexun-shadow-soft: 0 0.75rem 2rem rgb(22 34 56 / 8%);
-  --nexun-shadow-floating: 0 1rem 2.5rem rgb(22 34 56 / 12%);
+  --nexun-shadow-soft: 0 0.75rem 2rem rgb(16 33 61 / 10%);
+  --nexun-shadow-floating: 0 1rem 2.5rem rgb(16 33 61 / 14%);
 
   --nexun-motion-fast: 160ms;
   --nexun-motion-standard: 280ms;

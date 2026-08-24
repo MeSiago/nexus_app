@@ -6,10 +6,11 @@ Nexun-specific system; it does not reproduce Linear's identity or assets.
 
 ## Visual contract
 
-- Use a near-black canvas, quiet dark surfaces, one-pixel keylines, and restrained
+- Use a soft off-white canvas, white surfaces, one-pixel keylines, and restrained
   elevation.
 - Reserve desaturated blue for contextual orientation, focus, and purposeful
-  technical emphasis. Keep body copy, primary actions, and large areas monochrome.
+  technical emphasis. Keep body copy and large areas monochrome; use blue for
+  primary actions and small technical accents.
 - Give each route one clear H1 and one primary idea. Pair a concise message
   with one contextual institutional visual when it improves comprehension.
 - Keep public copy in Brazilian Portuguese and keep unresolved business facts
@@ -47,8 +48,8 @@ for repeated Nexun patterns. Keep route composition in `components/sections`.
 - All icon-only controls need an accessible name.
 - Every interactive state needs visible focus, hover, active, and disabled
   treatment where applicable.
-- Use a dark contextual institutional surface only as a contained visual frame,
-  with its own light text roles.
+- Use a lightly tinted contextual institutional surface as a contained visual
+  frame, with its own dark text roles.
 - Do not use technical diagrams or topology unless every represented fact is
   explicitly approved. Contextual visuals must not imply coverage, physical
   infrastructure, operational presence, status, or availability.
