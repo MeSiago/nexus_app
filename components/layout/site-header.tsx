@@ -102,7 +102,7 @@ export function SiteHeader() {
           : "border-transparent bg-background backdrop-blur-none"
       }`}
     >
-      <div className="mx-auto flex h-full max-w-content items-center justify-between px-6 lg:px-10">
+      <div className="mx-auto flex h-full max-w-content items-center justify-between px-4 sm:px-6 lg:px-10">
         <Link
           className="inline-flex rounded-md text-[1.45rem] font-semibold tracking-[-0.065em] text-ink outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-4 focus-visible:ring-offset-background"
           href="/"
@@ -112,7 +112,7 @@ export function SiteHeader() {
           <span>un</span>
         </Link>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <nav
             aria-label="Navegação principal"
             className="relative hidden md:block"
@@ -268,10 +268,10 @@ export function SiteHeader() {
           </nav>
 
           <Link
-            className="inline-flex h-10 items-center justify-center rounded-pill bg-primary-600 px-4 text-[0.8125rem] font-semibold text-ink-on-primary transition-[transform,background-color,color] duration-160 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring active:scale-x-[0.96]"
+            className="inline-flex h-10 items-center justify-center rounded-pill bg-primary-600 px-3 text-center text-[0.75rem] leading-4 font-semibold whitespace-nowrap text-ink-on-primary transition-[transform,background-color,color] duration-160 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring active:scale-x-[0.96] sm:px-4 sm:text-[0.8125rem]"
             href="/contato"
           >
-            Contato
+            Fale com um consultor
           </Link>
 
           <details className="group relative md:hidden">

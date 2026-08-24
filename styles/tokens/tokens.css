@@ -10,16 +10,16 @@
   --nexun-color-border: #d7e0ec;
   --nexun-color-border-subtle: rgb(16 33 61 / 10%);
   --nexun-color-border-strong: #b6c3d6;
-  --nexun-color-primary-50: #eef3ff;
-  --nexun-color-primary-100: #dce7ff;
-  --nexun-color-primary-500: #4d69a3;
-  --nexun-color-primary-600: #3457a5;
-  --nexun-color-primary-700: #26458f;
+  --nexun-color-primary-50: #edf3ff;
+  --nexun-color-primary-100: #d9e6ff;
+  --nexun-color-primary-500: #4775d1;
+  --nexun-color-primary-600: #2d5fc4;
+  --nexun-color-primary-700: #1f4ca8;
   --nexun-color-ink-on-primary: #ffffff;
   --nexun-color-deep-blue: #eef3ff;
   --nexun-color-deep-blue-ink: #10213d;
   --nexun-color-deep-blue-muted: #5b6b82;
-  --nexun-color-focus-ring: #3457a5;
+  --nexun-color-focus-ring: #2d5fc4;
 
   --nexun-font-sans: "Inter", "Avenir Next", "Segoe UI", Helvetica, Arial,
     sans-serif;
