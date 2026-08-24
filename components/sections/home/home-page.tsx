@@ -167,12 +167,12 @@ export function HomePage() {
                 <radialGradient id="cta-glow" cx="1" cy="0.5" r="0.8">
                   <stop
                     offset="0"
-                    stopColor="var(--nexus-color-primary-500)"
+                    stopColor="var(--nexun-color-primary-500)"
                     stopOpacity="0.16"
                   />
                   <stop
                     offset="1"
-                    stopColor="var(--nexus-color-primary-500)"
+                    stopColor="var(--nexun-color-primary-500)"
                     stopOpacity="0"
                   />
                 </radialGradient>

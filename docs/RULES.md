@@ -1,4 +1,4 @@
-# Nexus — Development Rules
+# Nexun — Development Rules
 
 ## General
 
@@ -21,7 +21,7 @@
 
 1. Put shared site chrome in `components/layout`.
 2. Put low-level accessible elements and Radix wrappers in `components/ui/primitives`.
-3. Put reusable, Nexus-specific UI patterns in `components/ui/compositions`.
+3. Put reusable, Nexun-specific UI patterns in `components/ui/compositions`.
 4. Put composed page sections in the matching folder under `components/sections`.
 5. Create a shared component only after it represents a stable repeated pattern, not merely similar markup.
 6. Preserve semantic HTML first; use Radix UI when it adds accessible interactive behavior.

@@ -1,8 +1,8 @@
-# Nexus design system
+# Nexun design system
 
 This is the implementation guide for the design direction in
 `docs/linear-design-extraction.md`. It translates the reference pattern into a
-Nexus-specific system; it does not reproduce Linear's identity or assets.
+Nexun-specific system; it does not reproduce Linear's identity or assets.
 
 ## Visual contract
 
@@ -41,7 +41,7 @@ The approved scale is intentionally small:
 ## Component rules
 
 Use `components/ui/primitives` for semantic controls and `components/ui/compositions`
-for repeated Nexus patterns. Keep route composition in `components/sections`.
+for repeated Nexun patterns. Keep route composition in `components/sections`.
 
 - Links navigate; buttons act.
 - All icon-only controls need an accessible name.

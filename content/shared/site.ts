@@ -1,7 +1,7 @@
 import type { NavigationItem } from "@/types/content";
 
 export const siteContent = {
-  name: "Nexus",
+  name: "Nexun",
   description:
     "Conectividade para empresas que operam dentro de aeroportos.",
   location: "São Paulo, Brasil",
@@ -14,7 +14,7 @@ export const siteContent = {
   footer: {
     navigationLabel: "Navegação do rodapé",
     navigationGroups: [
-      { label: "Nexus", hrefs: ["/", "/sobre"] },
+      { label: "Nexun", hrefs: ["/", "/sobre"] },
       { label: "Explorar", hrefs: ["/solucoes", "/contato"] },
     ],
   },

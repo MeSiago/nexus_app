@@ -5,7 +5,7 @@ export const pageContent = {
     eyebrow: "Conectividade em ambientes aeroportuários",
     title: "Infraestrutura de rede para operações que não podem parar.",
     description:
-      "A Nexus atende empresas que operam dentro de aeroportos com soluções de conectividade, instalação e manutenção de pontos de rede.",
+      "A Nexun atende empresas que operam dentro de aeroportos com soluções de conectividade, instalação e manutenção de pontos de rede.",
   },
   solutions: {
     eyebrow: "Soluções",
@@ -14,10 +14,10 @@ export const pageContent = {
       "Links de rede, instalação de pontos e manutenção apresentados de forma clara e institucional. Detalhes técnicos e comerciais serão incorporados após validação.",
   },
   about: {
-    eyebrow: "Sobre a Nexus",
+    eyebrow: "Sobre a Nexun",
     title: "Uma presença dedicada à conectividade dentro de aeroportos.",
     description:
-      "Esta área receberá a história, a missão e os compromissos institucionais da Nexus quando o conteúdo for aprovado.",
+      "Esta área receberá a história, a missão e os compromissos institucionais da Nexun quando o conteúdo for aprovado.",
   },
   contact: {
     eyebrow: "Contato",

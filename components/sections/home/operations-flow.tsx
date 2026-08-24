@@ -11,8 +11,8 @@ export function OperationsFlow({
       aria-labelledby="home-flow-title"
       className="overflow-hidden rounded-lg border border-border-subtle bg-surface"
     >
-      <div className="grid border-b border-border-subtle lg:grid-cols-[0.78fr_1.22fr]">
-        <div className="border-b border-border-subtle px-5 py-8 sm:px-8 sm:py-10 lg:border-r lg:border-b-0 lg:px-10 lg:py-12">
+      <div className="grid items-stretch border-b border-border-subtle lg:grid-cols-3">
+        <div className="border-b border-border-subtle px-5 py-8 sm:px-8 sm:py-10 lg:col-span-1 lg:border-r lg:border-b-0 lg:px-10 lg:py-12">
           <p className="font-mono text-[0.6875rem] leading-4 tracking-[0.12em] text-primary-500 uppercase">
             {content.eyebrow}
           </p>
@@ -24,7 +24,7 @@ export function OperationsFlow({
           </h3>
         </div>
 
-        <ol className="relative grid gap-0 sm:grid-cols-2">
+        <ol className="relative grid gap-0 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-2 lg:grid-rows-2">
           {content.steps.map((step) => (
             <li
               className="relative min-h-40 border-b border-border-subtle px-5 py-6 last:border-b-0 odd:sm:border-r sm:px-7 sm:py-7 sm:[&:nth-last-child(-n+2)]:border-b-0"

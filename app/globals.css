@@ -2,35 +2,35 @@
 @import "../styles/tokens/tokens.css";
 
 @theme inline {
-  --color-background: var(--nexus-color-background);
-  --color-surface: var(--nexus-color-surface);
-  --color-surface-subtle: var(--nexus-color-surface-subtle);
-  --color-surface-raised: var(--nexus-color-surface-raised);
-  --color-ink: var(--nexus-color-ink);
-  --color-muted-ink: var(--nexus-color-muted-ink);
-  --color-border: var(--nexus-color-border);
-  --color-border-subtle: var(--nexus-color-border-subtle);
-  --color-border-strong: var(--nexus-color-border-strong);
-  --color-primary-50: var(--nexus-color-primary-50);
-  --color-primary-100: var(--nexus-color-primary-100);
-  --color-primary-500: var(--nexus-color-primary-500);
-  --color-primary-600: var(--nexus-color-primary-600);
-  --color-primary-700: var(--nexus-color-primary-700);
-  --color-ink-on-primary: var(--nexus-color-ink-on-primary);
-  --color-deep-blue: var(--nexus-color-deep-blue);
-  --color-deep-blue-ink: var(--nexus-color-deep-blue-ink);
-  --color-deep-blue-muted: var(--nexus-color-deep-blue-muted);
-  --color-focus-ring: var(--nexus-color-focus-ring);
-  --font-sans: var(--nexus-font-sans);
-  --font-mono: var(--nexus-font-mono);
+  --color-background: var(--nexun-color-background);
+  --color-surface: var(--nexun-color-surface);
+  --color-surface-subtle: var(--nexun-color-surface-subtle);
+  --color-surface-raised: var(--nexun-color-surface-raised);
+  --color-ink: var(--nexun-color-ink);
+  --color-muted-ink: var(--nexun-color-muted-ink);
+  --color-border: var(--nexun-color-border);
+  --color-border-subtle: var(--nexun-color-border-subtle);
+  --color-border-strong: var(--nexun-color-border-strong);
+  --color-primary-50: var(--nexun-color-primary-50);
+  --color-primary-100: var(--nexun-color-primary-100);
+  --color-primary-500: var(--nexun-color-primary-500);
+  --color-primary-600: var(--nexun-color-primary-600);
+  --color-primary-700: var(--nexun-color-primary-700);
+  --color-ink-on-primary: var(--nexun-color-ink-on-primary);
+  --color-deep-blue: var(--nexun-color-deep-blue);
+  --color-deep-blue-ink: var(--nexun-color-deep-blue-ink);
+  --color-deep-blue-muted: var(--nexun-color-deep-blue-muted);
+  --color-focus-ring: var(--nexun-color-focus-ring);
+  --font-sans: var(--nexun-font-sans);
+  --font-mono: var(--nexun-font-mono);
   --container-content: 77.5rem;
-  --shadow-soft: var(--nexus-shadow-soft);
-  --shadow-floating: var(--nexus-shadow-floating);
-  --radius-sm: var(--nexus-radius-sm);
-  --radius-md: var(--nexus-radius-md);
-  --radius-lg: var(--nexus-radius-lg);
-  --radius-pill: var(--nexus-radius-pill);
-  --ease-standard: var(--nexus-ease-standard);
+  --shadow-soft: var(--nexun-shadow-soft);
+  --shadow-floating: var(--nexun-shadow-floating);
+  --radius-sm: var(--nexun-radius-sm);
+  --radius-md: var(--nexun-radius-md);
+  --radius-lg: var(--nexun-radius-lg);
+  --radius-pill: var(--nexun-radius-pill);
+  --ease-standard: var(--nexun-ease-standard);
 }
 
 @stylex;
@@ -42,7 +42,7 @@
 
   html {
     min-width: 320px;
-    background: var(--nexus-color-background);
+    background: var(--nexun-color-background);
     scroll-behavior: smooth;
     font-synthesis: none;
   }
@@ -50,9 +50,9 @@
   body {
     min-height: 100vh;
     margin: 0;
-    background: var(--nexus-color-background);
-    color: var(--nexus-color-ink);
-    font-family: var(--nexus-font-sans);
+    background: var(--nexun-color-background);
+    color: var(--nexun-color-ink);
+    font-family: var(--nexun-font-sans);
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -65,8 +65,8 @@
   }
 
   ::selection {
-    background: var(--nexus-color-primary-100);
-    color: var(--nexus-color-ink);
+    background: var(--nexun-color-primary-100);
+    color: var(--nexun-color-ink);
   }
 
   summary {
@@ -85,7 +85,7 @@
   }
 }
 
-@keyframes nexus-menu-in {
+@keyframes nexun-menu-in {
   from {
     opacity: 0;
     transform: scale(0.98);
@@ -97,7 +97,7 @@
   }
 }
 
-@keyframes nexus-menu-out {
+@keyframes nexun-menu-out {
   from {
     opacity: 1;
     transform: scale(1);
@@ -109,7 +109,7 @@
   }
 }
 
-@keyframes nexus-menu-in-right {
+@keyframes nexun-menu-in-right {
   from {
     opacity: 0;
     transform: translateX(3rem);
@@ -121,7 +121,7 @@
   }
 }
 
-@keyframes nexus-menu-in-left {
+@keyframes nexun-menu-in-left {
   from {
     opacity: 0;
     transform: translateX(-3rem);
@@ -133,7 +133,7 @@
   }
 }
 
-@keyframes nexus-menu-out-left {
+@keyframes nexun-menu-out-left {
   from {
     opacity: 1;
     transform: translateX(0);
@@ -145,7 +145,7 @@
   }
 }
 
-@keyframes nexus-menu-out-right {
+@keyframes nexun-menu-out-right {
   from {
     opacity: 1;
     transform: translateX(0);

@@ -270,12 +270,12 @@ Rules:
 - Keep text inside the proof frame shorter and smaller than the surrounding marketing copy.
 - Use captions or supporting labels outside the frame when the meaning is not self-evident.
 
-For Nexus, this pattern must not be interpreted as a technical diagram or an
+For Nexun, this pattern must not be interpreted as a technical diagram or an
 operational representation. Use contextual institutional illustration without
 implying topology, coverage, physical infrastructure, operational presence,
 status, or availability.
 
-Each Nexus frame may use no more than one slow symbolic loop. The loop must be
+Each Nexun frame may use no more than one slow symbolic loop. The loop must be
 purely decorative, remain subordinate to the content, and resolve to an
 intentional static composition when reduced motion is requested.
 

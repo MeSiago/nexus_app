@@ -26,20 +26,20 @@ function AirportPoint({
         <circle
           fill="none"
           r="18"
-          stroke="var(--nexus-color-primary-500)"
+          stroke="var(--nexun-color-primary-500)"
           strokeOpacity="0.1"
           strokeWidth="1"
         />
       ) : null}
       <circle
-        fill="var(--nexus-color-surface)"
+        fill="var(--nexun-color-surface)"
         r="5"
-        stroke="var(--nexus-color-primary-500)"
+        stroke="var(--nexun-color-primary-500)"
         strokeOpacity="0.28"
         strokeWidth="1"
       />
       <circle
-        fill="var(--nexus-color-primary-500)"
+        fill="var(--nexun-color-primary-500)"
         fillOpacity={emphasis ? "0.92" : "0.62"}
         r={emphasis ? "2.5" : "2"}
       />
@@ -52,16 +52,16 @@ function Aircraft() {
     <g transform="translate(406 223)">
       <path
         d="M-18 0-4-2l8-10 3 1-4 9 14 2-14 3 4 9-3 1-8-10-14-1Z"
-        fill="var(--nexus-color-ink)"
+        fill="var(--nexun-color-ink)"
         fillOpacity="0.9"
-        stroke="var(--nexus-color-primary-500)"
+        stroke="var(--nexun-color-primary-500)"
         strokeOpacity="0.34"
         strokeWidth="0.8"
       />
       <path
         d="M-6 0h13"
         fill="none"
-        stroke="var(--nexus-color-surface)"
+        stroke="var(--nexun-color-surface)"
         strokeOpacity="0.6"
         strokeWidth="0.7"
       />
@@ -78,50 +78,50 @@ function ConnectivityScene() {
       viewBox="0 0 1100 600"
     >
       <defs>
-        <radialGradient id="nexus-connectivity-glow" cx="50%" cy="48%" r="64%">
+        <radialGradient id="nexun-connectivity-glow" cx="50%" cy="48%" r="64%">
           <stop
             offset="0"
-            stopColor="var(--nexus-color-primary-500)"
+            stopColor="var(--nexun-color-primary-500)"
             stopOpacity="0.08"
           />
           <stop
             offset="0.58"
-            stopColor="var(--nexus-color-primary-500)"
+            stopColor="var(--nexun-color-primary-500)"
             stopOpacity="0.02"
           />
-          <stop offset="1" stopColor="var(--nexus-color-surface)" stopOpacity="0" />
+          <stop offset="1" stopColor="var(--nexun-color-surface)" stopOpacity="0" />
         </radialGradient>
-        <linearGradient id="nexus-connectivity-route" x1="0" x2="1">
+        <linearGradient id="nexun-connectivity-route" x1="0" x2="1">
           <stop
             offset="0"
-            stopColor="var(--nexus-color-muted-ink)"
+            stopColor="var(--nexun-color-muted-ink)"
             stopOpacity="0.08"
           />
           <stop
             offset="0.5"
-            stopColor="var(--nexus-color-primary-500)"
+            stopColor="var(--nexun-color-primary-500)"
             stopOpacity="0.5"
           />
           <stop
             offset="1"
-            stopColor="var(--nexus-color-muted-ink)"
+            stopColor="var(--nexun-color-muted-ink)"
             stopOpacity="0.08"
           />
         </linearGradient>
       </defs>
 
-      <rect fill="var(--nexus-color-surface)" height="600" width="1100" />
+      <rect fill="var(--nexun-color-surface)" height="600" width="1100" />
       <ellipse
         cx="550"
         cy="300"
-        fill="url(#nexus-connectivity-glow)"
+        fill="url(#nexun-connectivity-glow)"
         rx="510"
         ry="300"
       />
 
       <g
         fill="none"
-        stroke="var(--nexus-color-border-subtle)"
+        stroke="var(--nexun-color-border-subtle)"
         strokeLinecap="round"
         strokeWidth="1"
       >
@@ -135,7 +135,7 @@ function ConnectivityScene() {
 
       <g
         fill="none"
-        stroke="url(#nexus-connectivity-route)"
+        stroke="url(#nexun-connectivity-route)"
         strokeLinecap="round"
         strokeWidth="1.5"
       >
@@ -144,7 +144,7 @@ function ConnectivityScene() {
         <path d="M644 244C748 296 836 300 975 300" />
       </g>
 
-      <g fill="none" stroke="var(--nexus-color-primary-500)" strokeOpacity="0.12">
+      <g fill="none" stroke="var(--nexun-color-primary-500)" strokeOpacity="0.12">
         <ellipse cx="550" cy="300" rx="390" ry="202" strokeWidth="1" />
         <ellipse cx="550" cy="300" rx="280" ry="130" strokeWidth="1" />
       </g>

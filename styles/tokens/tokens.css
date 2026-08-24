@@ -1,52 +1,52 @@
 :root {
   color-scheme: dark;
 
-  --nexus-color-background: #08090a;
-  --nexus-color-surface: #0f1011;
-  --nexus-color-surface-subtle: #121315;
-  --nexus-color-surface-raised: #161718;
-  --nexus-color-ink: #f7f8f8;
-  --nexus-color-muted-ink: #8a8f98;
-  --nexus-color-border: #23252a;
-  --nexus-color-border-subtle: rgb(255 255 255 / 8%);
-  --nexus-color-border-strong: #23252a;
-  --nexus-color-primary-50: #161718;
-  --nexus-color-primary-100: #1c1c1d;
-  --nexus-color-primary-500: #8e9abc;
-  --nexus-color-primary-600: #f4f5f8;
-  --nexus-color-primary-700: #d0d6e0;
-  --nexus-color-ink-on-primary: #08090a;
-  --nexus-color-deep-blue: #0f1011;
-  --nexus-color-deep-blue-ink: #f7f8f8;
-  --nexus-color-deep-blue-muted: #8a8f98;
-  --nexus-color-focus-ring: #8e9abc;
+  --nexun-color-background: #08090a;
+  --nexun-color-surface: #0f1011;
+  --nexun-color-surface-subtle: #121315;
+  --nexun-color-surface-raised: #161718;
+  --nexun-color-ink: #f7f8f8;
+  --nexun-color-muted-ink: #8a8f98;
+  --nexun-color-border: #23252a;
+  --nexun-color-border-subtle: rgb(255 255 255 / 8%);
+  --nexun-color-border-strong: #23252a;
+  --nexun-color-primary-50: #161718;
+  --nexun-color-primary-100: #1c1c1d;
+  --nexun-color-primary-500: #8e9abc;
+  --nexun-color-primary-600: #f4f5f8;
+  --nexun-color-primary-700: #d0d6e0;
+  --nexun-color-ink-on-primary: #08090a;
+  --nexun-color-deep-blue: #0f1011;
+  --nexun-color-deep-blue-ink: #f7f8f8;
+  --nexun-color-deep-blue-muted: #8a8f98;
+  --nexun-color-focus-ring: #8e9abc;
 
-  --nexus-font-sans: "Inter", "Avenir Next", "Segoe UI", Helvetica, Arial,
+  --nexun-font-sans: "Inter", "Avenir Next", "Segoe UI", Helvetica, Arial,
     sans-serif;
-  --nexus-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --nexun-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 
-  --nexus-space-1: 0.25rem;
-  --nexus-space-2: 0.5rem;
-  --nexus-space-3: 0.75rem;
-  --nexus-space-4: 1rem;
-  --nexus-space-6: 1.5rem;
-  --nexus-space-8: 2rem;
-  --nexus-space-12: 3rem;
-  --nexus-space-16: 4rem;
-  --nexus-space-24: 6rem;
-  --nexus-space-32: 8rem;
+  --nexun-space-1: 0.25rem;
+  --nexun-space-2: 0.5rem;
+  --nexun-space-3: 0.75rem;
+  --nexun-space-4: 1rem;
+  --nexun-space-6: 1.5rem;
+  --nexun-space-8: 2rem;
+  --nexun-space-12: 3rem;
+  --nexun-space-16: 4rem;
+  --nexun-space-24: 6rem;
+  --nexun-space-32: 8rem;
 
-  --nexus-radius-sm: 0.25rem;
-  --nexus-radius-md: 0.5rem;
-  --nexus-radius-lg: 0.75rem;
-  --nexus-radius-pill: 9999px;
+  --nexun-radius-sm: 0.25rem;
+  --nexun-radius-md: 0.5rem;
+  --nexun-radius-lg: 0.75rem;
+  --nexun-radius-pill: 9999px;
 
-  --nexus-shadow-soft: 0 0.75rem 2rem rgb(22 34 56 / 8%);
-  --nexus-shadow-floating: 0 1rem 2.5rem rgb(22 34 56 / 12%);
+  --nexun-shadow-soft: 0 0.75rem 2rem rgb(22 34 56 / 8%);
+  --nexun-shadow-floating: 0 1rem 2.5rem rgb(22 34 56 / 12%);
 
-  --nexus-motion-fast: 160ms;
-  --nexus-motion-standard: 280ms;
-  --nexus-motion-reveal: 360ms;
-  --nexus-motion-ambient: 11s;
-  --nexus-ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --nexun-motion-fast: 160ms;
+  --nexun-motion-standard: 280ms;
+  --nexun-motion-reveal: 360ms;
+  --nexun-motion-ambient: 11s;
+  --nexun-ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
 }

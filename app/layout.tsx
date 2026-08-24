@@ -8,8 +8,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Nexus",
-    template: "%s | Nexus",
+    default: "Nexun",
+    template: "%s | Nexun",
   },
   description: siteContent.description,
 };

@@ -1,12 +1,12 @@
-# Nexus — Source of Truth
+# Nexun — Source of Truth
 
 ## Purpose
 
-This document is the operational reference for the Nexus website. It translates the product foundation into development boundaries and should remain aligned with `docs/product-foundation.md` as the project evolves.
+This document is the operational reference for the Nexun website. It translates the product foundation into development boundaries and should remain aligned with `docs/product-foundation.md` as the project evolves.
 
 ## Product summary
 
-Nexus is a Brazilian B2B connectivity company serving businesses that already operate within airports. The website is its institutional presence and must help referred contacts, partners, and prospective clients understand the company, its services, and how to begin a conversation.
+Nexun is a Brazilian B2B connectivity company serving businesses that already operate within airports. The website is its institutional presence and must help referred contacts, partners, and prospective clients understand the company, its services, and how to begin a conversation.
 
 The experience is intentionally small in functional scope and ambitious in visual quality. It should feel corporate, understated, trustworthy, precise, and premium without inventing claims or operational details.
 

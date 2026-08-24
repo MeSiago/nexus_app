@@ -1,4 +1,4 @@
-# Nexus — Product Foundation
+# Nexun — Product Foundation
 
 **Status:** Initial product and scope document  
 **Version:** 0.1  
@@ -6,13 +6,13 @@
 
 ## 1. Document purpose
 
-This document defines what the first Nexus website is, who it serves, and the boundaries that should guide its development. It is the reference point for development, design, and future content decisions.
+This document defines what the first Nexun website is, who it serves, and the boundaries that should guide its development. It is the reference point for development, design, and future content decisions.
 
 It is not a final brand, marketing-content, operations, or integration document. Those elements will be incorporated incrementally after the site's foundation is complete.
 
 ## 2. Product vision
 
-Nexus is a connectivity company focused on businesses already operating within airports. The website will be its digital institutional presence: a trusted place for referred contacts, partners, and prospective clients to quickly understand what the company does and how to begin a conversation.
+Nexun is a connectivity company focused on businesses already operating within airports. The website will be its digital institutional presence: a trusted place for referred contacts, partners, and prospective clients to quickly understand what the company does and how to begin a conversation.
 
 The product will be a multi-page B2B corporate website in Portuguese, with a corporate, understated, and minimalist tone.
 
@@ -44,7 +44,7 @@ The main acquisition channel is expected to be referrals and commercial relation
 
 ## 4. Services within the initial communication scope
 
-The website should present Nexus clearly, without prematurely detailing processes, numerical SLAs, or commercial terms.
+The website should present Nexun clearly, without prematurely detailing processes, numerical SLAs, or commercial terms.
 
 - Network-link provision for network points.
 - Network-point installation.
@@ -54,7 +54,7 @@ Technical details, packages, availability, timelines, prices, and quantitative p
 
 ## 5. Website objectives
 
-1. Present Nexus professionally and consistently.
+1. Present Nexun professionally and consistently.
 2. Clearly communicate the audience served and available services.
 3. Convey the values of reliability, operational excellence, support, and SLA commitment.
 4. Support conversations initiated through referrals, partners, and the commercial team.
@@ -66,14 +66,14 @@ The site will not be a single-page application. It will have independent routes 
 
 | Route | Purpose | Expected initial content |
 | --- | --- | --- |
-| `/` | Home | Nexus positioning, a concise services overview, core values, and a route toward contact. |
+| `/` | Home | Nexun positioning, a concise services overview, core values, and a route toward contact. |
 | `/solucoes` | Solutions | Network links, installation, and maintenance, presented at an institutional level. |
 | `/sobre` | About | Future space for mission, customer commitment, and a brief founder story. |
 | `/contato` | Contact | Institutional contact point; WhatsApp and form behavior will be defined and implemented later. |
 
 ### Shared elements
 
-- Header with Nexus identity and primary navigation.
+- Header with Nexun identity and primary navigation.
 - Institutional footer.
 - Responsive layout for desktop and mobile devices.
 - Reusable component foundation for sections, buttons, cards, and contact prompts.
@@ -143,7 +143,7 @@ However, a working form will eventually need a processing destination: for examp
 
 The [Grupo Arion website](https://www.grupoarion.com.br/) was reviewed as a category reference. It presents a broad portfolio of telecommunications services, solutions, news, and multiple contact paths.
 
-Nexus should adopt only the useful principles—clear institutional presentation, straightforward navigation, and visible access to contact—while keeping a smaller scope specialized for businesses operating within airports. There is no intent to reproduce its extensive structure, copy, or visual identity.
+Nexun should adopt only the useful principles—clear institutional presentation, straightforward navigation, and visible access to contact—while keeping a smaller scope specialized for businesses operating within airports. There is no intent to reproduce its extensive structure, copy, or visual identity.
 
 ## 12. Next development stage
 

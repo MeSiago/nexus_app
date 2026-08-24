@@ -1,6 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 
 export const typography = stylex.defineVars({
-  sans: "var(--nexus-font-sans)",
-  mono: "var(--nexus-font-mono)",
+  sans: "var(--nexun-font-sans)",
+  mono: "var(--nexun-font-mono)",
 });

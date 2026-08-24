@@ -4,7 +4,7 @@ export const homeContent = {
   metadata: {
     title: "Conectividade para operações em aeroportos",
     description:
-      "Conheça a atuação da Nexus em links de rede, instalação e manutenção para empresas que operam em aeroportos.",
+      "Conheça a atuação da Nexun em links de rede, instalação e manutenção para empresas que operam em aeroportos.",
   },
   hero: {
     eyebrow: "Conectividade em ambientes aeroportuários",
@@ -29,14 +29,14 @@ export const homeContent = {
     title:
       "Em um aeroporto, a rede faz parte de uma operação maior — e precisa ser tratada com o mesmo cuidado.",
     description:
-      "A Nexus concentra sua atuação na conectividade de empresas presentes nesse ambiente, com uma abordagem técnica, institucional e orientada ao contexto de cada operação.",
+      "A Nexun concentra sua atuação na conectividade de empresas presentes nesse ambiente, com uma abordagem técnica, institucional e orientada ao contexto de cada operação.",
   },
   services: {
     index: "02",
     eyebrow: "Soluções",
     title: "Uma atuação concentrada no que sustenta a conexão.",
     description:
-      "Três frentes complementares apresentam, de forma objetiva, o escopo inicial de serviços da Nexus.",
+      "Três frentes complementares apresentam, de forma objetiva, o escopo inicial de serviços da Nexun.",
     items: [
       {
         number: "01",

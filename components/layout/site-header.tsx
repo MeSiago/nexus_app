@@ -109,7 +109,7 @@ export function SiteHeader() {
         >
           <span>Ne</span>
           <span className="text-primary-600">x</span>
-          <span>us</span>
+          <span>un</span>
         </Link>
 
         <div className="flex items-center gap-3">
@@ -191,8 +191,8 @@ export function SiteHeader() {
                 <div
                   className={`origin-top-right overflow-hidden rounded-[0.875rem] border border-border bg-surface/90 p-2 shadow-floating backdrop-blur-[32px] transition-[height] duration-[220ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
                     activeMenu
-                      ? "animate-[nexus-menu-in_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
-                      : "animate-[nexus-menu-out_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
+                      ? "animate-[nexun-menu-in_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
+                      : "animate-[nexun-menu-out_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
                   }`}
                   onAnimationEnd={(event) => {
                     if (!activeMenu && event.target === event.currentTarget) {
@@ -212,8 +212,8 @@ export function SiteHeader() {
                         <div
                           className={`pointer-events-none absolute inset-0 ${
                             menuDirection === "right"
-                              ? "animate-[nexus-menu-out-left_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
-                              : "animate-[nexus-menu-out-right_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
+                              ? "animate-[nexun-menu-out-left_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
+                              : "animate-[nexun-menu-out-right_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
                           }`}
                         >
                           <DropdownItems
@@ -230,8 +230,8 @@ export function SiteHeader() {
                           className={
                             previousMenu
                               ? menuDirection === "right"
-                                ? "animate-[nexus-menu-in-right_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
-                                : "animate-[nexus-menu-in-left_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
+                                ? "animate-[nexun-menu-in-right_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
+                                : "animate-[nexun-menu-in-left_180ms_cubic-bezier(0.455,0.03,0.515,0.955)_both]"
                               : undefined
                           }
                           key={activeMenu}
@@ -250,7 +250,7 @@ export function SiteHeader() {
                     {activeMenu === "solutions" ? (
                       <div className="flex items-center justify-between border-t border-border-subtle px-4 pt-4 pb-3 text-sm">
                         <p className="text-muted-ink">
-                          Conheça as soluções da Nexus
+                          Conheça as soluções da Nexun
                         </p>
                         <Link
                           className="font-medium text-primary-600 transition-colors duration-100 hover:text-primary-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring"
