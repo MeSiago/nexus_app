@@ -1,0 +1,43 @@
+.topography {
+  opacity: 0.72;
+  stroke-dasharray: 2 9;
+}
+
+.route {
+  animation: route-flow 2.4s linear infinite;
+}
+
+.pulse {
+  animation: point-pulse 3.6s ease-out infinite;
+  animation-delay: var(--pulse-delay);
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.aircraft {
+  animation: aircraft-flight 12s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  offset-path: path("M182 466 C350 390 492 329 632 270 S829 180 925 142");
+  offset-rotate: auto;
+}
+
+@keyframes route-flow {
+  to { stroke-dashoffset: -28; }
+}
+
+@keyframes point-pulse {
+  0% { opacity: 0.72; transform: scale(0.35); }
+  72%, 100% { opacity: 0; transform: scale(1.35); }
+}
+
+@keyframes aircraft-flight {
+  0% { offset-distance: 0%; opacity: 0; }
+  5%, 92% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route, .pulse, .aircraft { animation: none; }
+  .aircraft { offset-distance: 54%; opacity: 1; }
+  .pulse { opacity: 0.24; }
+}
