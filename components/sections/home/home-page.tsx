@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { homeContent } from "@/content/pages/home-content";
 
-import { NetworkTopology } from "./network-topology";
+import { AirportConnectivityVisual } from "./airport-connectivity-visual";
 import { OperationsFlow } from "./operations-flow";
 
 function SectionMarker({ index, eyebrow }: { index: string; eyebrow: string }) {
@@ -16,7 +16,8 @@ function SectionMarker({ index, eyebrow }: { index: string; eyebrow: string }) {
 }
 
 export function HomePage() {
-  const { hero, proof, manifesto, services, flow, values, cta } = homeContent;
+  const { hero, contextVisual, manifesto, services, flow, values, cta } =
+    homeContent;
 
   return (
     <div className="overflow-hidden bg-background">
@@ -56,7 +57,7 @@ export function HomePage() {
           </div>
 
           <div className="mt-16 sm:mt-20 lg:mt-24">
-            <NetworkTopology content={proof} />
+            <AirportConnectivityVisual content={contextVisual} />
           </div>
         </div>
       </section>

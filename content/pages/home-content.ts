@@ -16,19 +16,12 @@ export const homeContent = {
       { href: "/contato", label: "Ir para contato" },
     ],
   },
-  proof: {
-    eyebrow: "Topologia conceitual",
-    meta: "Nexus / Rede",
-    title: "Uma infraestrutura conectada ao contexto da operação.",
+  contextVisual: {
+    eyebrow: "Conectividade aeroportuária",
+    meta: "Brasil em foco",
+    title: "Uma visão do contexto em que a conectividade acontece.",
     caption:
-      "Representação ilustrativa da relação entre áreas, infraestrutura e pontos de rede. Não corresponde a um mapa ou projeto contratado.",
-    nodes: {
-      terminal: { eyebrow: "Área", label: "Terminal" },
-      operations: { eyebrow: "Área", label: "Operações" },
-      core: { eyebrow: "Nexus", label: "Conectividade" },
-      infrastructure: { eyebrow: "Base", label: "Infraestrutura" },
-      networkPoints: { eyebrow: "Extremidade", label: "Pontos de rede" },
-    },
+      "Ilustração conceitual. Rotas e pontos não representam cobertura, aeroportos atendidos, presença física ou infraestrutura real.",
   },
   manifesto: {
     index: "01",

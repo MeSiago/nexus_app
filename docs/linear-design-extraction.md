@@ -18,7 +18,8 @@ The result feels calm, premium, technical, and exceptionally intentional. The de
 - Use one visual idea per section.
 - Prefer keylines and surface shifts over heavy shadows.
 - Let typography do most of the expressive work.
-- Use product UI, diagrams, and technical artifacts as proof—not as ornamental mockups.
+- Use one contained contextual visual to support the section's atmosphere and
+  subject without presenting unapproved product or operational proof.
 - Keep controls compact, tactile, and visually quiet until interaction.
 - Make desktop and mobile feel like intentional compositions, not resized versions of each other.
 
@@ -198,7 +199,7 @@ Linear’s homepage follows a repeatable cadence:
 1. Short navigation/header.
 2. Large positioning statement.
 3. Supporting description and directional link.
-4. Product or technical proof frame.
+4. Framed contextual or atmospheric visual.
 5. Keyline or visual divider.
 6. Short worldview/value statement.
 7. Repeatable feature sections with one artifact each.
@@ -268,6 +269,15 @@ Rules:
 - Use one focal state instead of showing every feature at once.
 - Keep text inside the proof frame shorter and smaller than the surrounding marketing copy.
 - Use captions or supporting labels outside the frame when the meaning is not self-evident.
+
+For Nexus, this pattern must not be interpreted as a technical diagram or an
+operational representation. Use contextual institutional illustration without
+implying topology, coverage, physical infrastructure, operational presence,
+status, or availability.
+
+Each Nexus frame may use no more than one slow symbolic loop. The loop must be
+purely decorative, remain subordinate to the content, and resolve to an
+intentional static composition when reduced motion is requested.
 
 ### 6.4 Feature/value rail
 

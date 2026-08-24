@@ -11,11 +11,6 @@ export type NavigationItem = {
 
 export type HomeRouteLink = Pick<NavigationItem, "href" | "label">;
 
-export type HomeProofNode = {
-  eyebrow: string;
-  label: string;
-};
-
 export type HomeService = {
   number: string;
   title: string;
@@ -44,18 +39,11 @@ export type HomePageContent = {
     description: string;
     links: readonly [HomeRouteLink, HomeRouteLink];
   };
-  proof: {
+  contextVisual: {
     eyebrow: string;
     meta: string;
     title: string;
     caption: string;
-    nodes: {
-      terminal: HomeProofNode;
-      operations: HomeProofNode;
-      core: HomeProofNode;
-      infrastructure: HomeProofNode;
-      networkPoints: HomeProofNode;
-    };
   };
   manifesto: {
     index: string;

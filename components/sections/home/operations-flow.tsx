@@ -34,7 +34,10 @@ export function OperationsFlow({
                 <span className="flex size-7 items-center justify-center rounded-pill border border-primary-500/30 bg-primary-50 font-mono text-[0.625rem] text-primary-500">
                   {step.number}
                 </span>
-                <span aria-hidden="true" className="h-px flex-1 bg-border" />
+                <span
+                  aria-hidden="true"
+                  className="h-px flex-1 bg-border sm:-mr-7"
+                />
               </div>
               <p className="mt-5 text-sm font-medium text-ink">{step.title}</p>
               <p className="mt-2 max-w-48 text-xs leading-5 text-muted-ink">

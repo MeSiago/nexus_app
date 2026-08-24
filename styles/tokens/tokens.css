@@ -47,5 +47,6 @@
   --nexus-motion-fast: 160ms;
   --nexus-motion-standard: 280ms;
   --nexus-motion-reveal: 360ms;
+  --nexus-motion-ambient: 11s;
   --nexus-ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
 }
